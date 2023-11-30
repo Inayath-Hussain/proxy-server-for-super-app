@@ -12,10 +12,7 @@ app.listen(PORT, () => { console.log('app listening on PORT', PORT) })
 app.get('/news', async (req, res) => {
     try {
         const result = await nodeFetch(`https://newsapi.org/v2/everything?q=tech&apiKey=${process.env.NEWS_API_KEY}`, {
-            method: 'GET',
-            header: {
-                "content-type": "application/json"
-            }
+            method: 'GET'
         })
 
         const data = await result.json()
