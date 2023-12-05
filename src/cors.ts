@@ -8,8 +8,9 @@ if (process.env.NODE_ENV === 'production') {
         origin: ["https://super-app-hazel-omega.vercel.app"]
     }
 }
-
-corsOptions = {
-    origin: /http:\/\/localhost:.{4}/,
-    allowedHeaders: []
+else {
+    corsOptions = {
+        origin: /http:\/\/localhost:.{4}/,
+        allowedHeaders: []
+    }
 }
