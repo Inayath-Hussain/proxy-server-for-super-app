@@ -8,6 +8,7 @@ export const checkOrigin = (req: Request, res: Response, next: NextFunction) => 
         return res.status(400).json({ message: "missing Origin in header" })
     }
     console.log(requestOrigin)
+    console.log(corsOptions.origin)
 
     // when server is running locally
     if (corsOptions.origin instanceof RegExp) {
