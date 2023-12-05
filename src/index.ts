@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000
 const app = express()
 
 
-app.listen(PORT, () => { console.log('app listening on PORT', PORT); })
+app.listen(PORT, () => { console.log(`app listening on PORT ${PORT} in ${process.env.NODE_ENV}`); })
 
 // middlewares
 app.options('*', cors(corsOptions))
