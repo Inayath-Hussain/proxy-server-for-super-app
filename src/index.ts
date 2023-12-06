@@ -3,6 +3,7 @@ import cors from "cors";
 import { corsOptions } from "./cors"
 import newsRoute from "./routes/news";
 import weatherRoute from "./routes/weather";
+import moviesRoute from "./routes/movies";
 import { checkOrigin } from "./middleware/origin";
 
 const PORT = process.env.PORT || 3000
@@ -19,10 +20,7 @@ app.use(checkOrigin)
 // routes
 app.use('/api/news', newsRoute);
 app.use('/api/weather', weatherRoute);
+app.use('/api/movies', moviesRoute)
 
-// block browsers
-// setting up cors dev✔, prod ✔
-
-// block other devices ✔
 
 // npm rm rf ?
